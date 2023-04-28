@@ -2,7 +2,7 @@
 
 Welcome to our WXSD DEMO Repo!
 
-This Webex Device macro creates a custom dial button on your device which lets a user enter text or number input and routes or modifies the input text before dialling using regular expressions.
+This Webex Device macro creates a custom dial button on your device which lets a user enter a text or number input. The macro will then match the input input text/number using regular expressions and modify it before dialling.
 
 ![image](https://user-images.githubusercontent.com/21026209/235207422-f28d2b3c-f858-42dd-b14f-c25fa4237962.png)
 
