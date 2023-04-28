@@ -19,9 +19,8 @@
 import xapi from 'xapi';
 
 const config = {
-  webexDomain: '@mtb.webex.com',
-  baseID:'dialpad',
-  button: {
+  baseID:'dialpad', // Base panel Id use to prevent conflict with other UI Extensions
+  button: { // UI Extention Button Config, the URL 
     name: 'Webex Call',
     icon: 'custom',
     url: 'https://wxsd-sales.github.io/kiosk-demos/icons/webex-logo.png'
@@ -37,7 +36,7 @@ const config = {
 const patterns = [
   { regex: '^([0-9]{8})$', action: 'append', number: '@webex.com' }, // Matches 8 digits -> <dialled> + '@webex.com'
   { regex: '^(.*)@(.*)$', action: 'continue' }, //Matches *@* URI -> Ignores URIs, allows to continue
-  { regex: '^(.*)$', action: 'append', number: '@mtb.webex.com' } // Matches everything else -> <dialled> + '@mtb.webex.com'
+  { regex: '^(.*)$', action: 'append', number: '@company.webex.com' } // Matches everything else -> <dialled> + '@company.webex.com'
 ]
 
 xapi.Event.UserInterface.Message.TextInput.Response.on(processTextInput)
