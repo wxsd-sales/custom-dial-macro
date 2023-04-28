@@ -39,6 +39,11 @@ const patterns = [
   { regex: '^(.*)$', action: 'append', number: '@company.webex.com' } // Matches everything else -> <dialled> + '@company.webex.com'
 ]
 
+
+/*********************************************************
+ * Main functions and event subscriptions
+**********************************************************/
+
 xapi.Event.UserInterface.Message.TextInput.Response.on(processTextInput)
 xapi.Event.UserInterface.Extensions.Panel.Clicked.on(processClicks)
 createPanel(config);
