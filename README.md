@@ -6,17 +6,23 @@ This Webex Device macro creates a custom dial button on your device which lets a
 
 ![image](https://user-images.githubusercontent.com/21026209/235207422-f28d2b3c-f858-42dd-b14f-c25fa4237962.png)
 
+## Overview
+
+The macro automatically downloads a custom image from a configured URL upon startup. It then saves a UI Extension button to the Webex Devices using the downloaded image as the icon. Next it subcribes to button clicks and text input events. When a user taps on the custom button, the macro opens a text input prompt and when the user entered their dial string information, the macro will match the dial string against an array of regular expressions. The expressions are able to append, prefix or leave the inputted dial string unmodified and once matched, the macro will place a call using the new dial string. 
+
+Here is an example of the regular expressions and how they can modify the user inputted dial string.
+```js
+const patterns = [
+  { regex: '^([0-9]{8})$', action: 'append', number: '@webex.com' }, // Matches 8 digits -> <dialled> + '@webex.com'
+  { regex: '^(.*)@(.*)$', action: 'continue' }, //Matches *@* URI -> Ignores URIs, allows to continue
+  { regex: '^(.*)$', action: 'append', number: '@company.webex.com' } // Matches everything else -> <dialled> + '@company.webex.com'
+]
+```
+
+
 ### Flow Diagram
 
 ![image](https://user-images.githubusercontent.com/21026209/235206216-20d3dce8-c985-44df-a3bb-1a37db528f02.png)
-
-
-## Features
-
-- Automatically downloads a custom image for custom icons
-- Saves a custom button UI extension to the device using the downloaded images as the icon uses
-- Prompts the users to enter a text or number dial string using using the devices native text input prompt
-- Matches inputed dial string against an array of regular expressions which can append digits or SIP domains before dialling.
 
 
 ## Setup
@@ -43,7 +49,7 @@ Validated Hardware:
 * Desk Pro
 * Room Kit
 
-This macro should work on other Webex Devices with WebEngine support but has not been validated at this time.
+This macro should work on other Webex Devices but has not been validated at this time.
 
 ## Demo
 
