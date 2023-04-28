@@ -15,8 +15,8 @@ This Webex Device macro creates a custom dial button on your device which lets a
 
 - Automatically downloads a custom image for custom icons
 - Saves a custom button UI extension to the device using the downloaded images as the icon uses
-- Let's users enter dial information using a native text input prompt
-- Matches that dial string with an array of regular expression which can append digits or SIP domains before dialling.
+- Prompts the users to enter a text or number dial string using using the devices native text input prompt
+- Matches inputed dial string against an array of regular expressions which can append digits or SIP domains before dialling.
 
 
 ## Setup
