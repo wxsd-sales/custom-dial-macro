@@ -2,8 +2,7 @@
 
 Welcome to our WXSD DEMO Repo!
 
-This Webex Device macro creates a custom dial button on your device which lets a user enter text or number input and routes or modifies the input text before dialling using regular expresssions.
-
+This Webex Device macro creates a custom dial button on your device which lets a user enter text or number input and routes or modifies the input text before dialling using regular expressions.
 
 ![image](https://user-images.githubusercontent.com/21026209/235207422-f28d2b3c-f858-42dd-b14f-c25fa4237962.png)
 
@@ -16,7 +15,7 @@ This Webex Device macro creates a custom dial button on your device which lets a
 
 - Automatically downloads a custom image for custom icons
 - Saves custom button a uses downloaded image as icon
-- Lets users enter dial infomration using a native text input prompt
+- Let's users enter dial information using a native text input prompt
 - Matches that dial string with an array of regular expression which can append digits or SIP domains before dialling.
 
 
@@ -25,9 +24,9 @@ This Webex Device macro creates a custom dial button on your device which lets a
 ## Requirements:
 
 - RoomOS/CE 9.15 or above Webex Device
-- Web admin access to the device to uplaod the macro.
+- Web admin access to the device to upload the macro.
 - A web hosted image icon to download (example provided)
-- Network connectivyt for the device to download the image icon (i.e. No firewall restrictions)
+- Network connectivity for the device to download the image icon (i.e. No firewall restrictions)
 
 ### Installation Steps:
 
@@ -57,7 +56,7 @@ All contents are licensed under the MIT license. Please see [license](LICENSE) f
 
 ## Disclaimer
 
-Everything included is for demo and Proof of Concept purposes only. Use of the site is solely at your own risk. This site may contain links to third party content, which we do not warrant, endorse, or assume liability for. These demos are for Cisco Webex usecases, but are not Official Cisco Webex Branded demos.
+Everything included is for demo and Proof of Concept purposes only. Use of the site is solely at your own risk. This site may contain links to third party content, which we do not warrant, endorse, or assume liability for. These demos are for Cisco Webex use cases, but are not Official Cisco Webex Branded demos.
 
 
 ## Questions
