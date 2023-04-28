@@ -14,18 +14,18 @@ This Webex Device macro creates a custom dial button on your device which lets a
 ## Features
 
 - Automatically downloads a custom image for custom icons
-- Saves custom button a uses downloaded image as icon
+- Saves a custom button UI extension to the device using the downloaded images as the icon uses
 - Let's users enter dial information using a native text input prompt
 - Matches that dial string with an array of regular expression which can append digits or SIP domains before dialling.
 
 
 ## Setup
 
-## Requirements:
+### Prerequisites & Dependencies:
 
 - RoomOS/CE 9.15 or above Webex Device
 - Web admin access to the device to upload the macro.
-- A web hosted image icon to download (example provided)
+- A web hosted image icon to download ( example provided in the macro config )
 - Network connectivity for the device to download the image icon (i.e. No firewall restrictions)
 
 ### Installation Steps:
