@@ -1,16 +1,15 @@
 # Custom Dial Macro
 
-Welcome to our WXSD DEMO Repo!
 
-This Webex Device macro creates a custom dial button on your device which lets a user enter a text or number input. The macro will then match the input input text/number using regular expressions and modify it before dialling.
+This Webex Device macro creates a custom dial button on your device, which lets a user enter a text or number input. The macro will then match the entered text/number using regular expressions and modify it before dialing.
 
 ![image](https://user-images.githubusercontent.com/21026209/235207422-f28d2b3c-f858-42dd-b14f-c25fa4237962.png)
 
 ## Overview
 
-The macro automatically downloads a custom image from a configured URL upon startup. It then saves a UI Extension button to the Webex Devices using the downloaded image as the icon. Next it subcribes to button clicks and text input events. When a user taps on the custom button, the macro opens a text input prompt and when the user entered their dial string information, the macro will match the dial string against an array of regular expressions. The expressions are able to append, prefix or leave the inputted dial string unmodified and once matched, the macro will place a call using the new dial string. 
+The macro automatically downloads a custom image from a configured URL upon startup. It then saves a UI Extension button to the Webex Devices using the downloaded image as the icon. Next, it subcribes to button clicks and text input events. When a user taps on the custom button, the macro opens a text input prompt and when the user enters their dial string information, the macro will match it against an array of regular expressions. The expressions are able to append the dial string, prefix the dial string or leave it unmodified. Once matched, the macro will place a call using the final dial string.
 
-Here is an example of the regular expressions and how they can modify the user inputted dial string.
+Here is an example of the regular expressions and how they can modify the user entered dial string.
 ```js
 const patterns = [
   { regex: '^([0-9]{8})$', action: 'append', number: '@webex.com' }, // Matches 8 digits -> <dialled> + '@webex.com'
@@ -30,20 +29,18 @@ const patterns = [
 ### Prerequisites & Dependencies:
 
 - RoomOS/CE 9.15 or above Webex Device
-- Web admin access to the device to upload the macro.
-- A web hosted image icon to download ( example provided in the macro config )
+- Web admin access to the device to upload the macro
+- A web hosted image icon to download (example provided in the macro config)
 - Network connectivity for the device to download the image icon (i.e. No firewall restrictions)
 
 ### Installation Steps:
 
-1. Download the ``custom-dial-macro.js`` file and upload it to your Webex Room devices Macro editor via the web interface.
-2. Configure the Macro by changing the initial values, there are comments explaining each one.
-3. Enable the Macro on the editor.
+1. Download the ``custom-dial-macro.js`` file and upload it to your Webex Room devices macro editor via the web interface.
+2. Configure the macro by changing the initial values, there are comments explaining each one.
+3. Enable the macro on the editor.
 
 
-## Validation
-
-Validated Hardware:
+## Validated Hardware:
 
 * Room Kit Pro
 * Desk Pro
