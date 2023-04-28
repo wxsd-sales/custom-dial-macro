@@ -20,12 +20,12 @@ import xapi from 'xapi';
 
 const config = {
   baseID:'dialpad', // Base panel Id use to prevent conflict with other UI Extensions
-  button: { // UI Extention Button Config, the URL 
-    name: 'Webex Call',
-    icon: 'custom',
-    url: 'https://wxsd-sales.github.io/kiosk-demos/icons/webex-logo.png'
+  button: { // UI Extention button Config
+    name: 'Webex Call', // Name of the button
+    icon: 'custom', // Leave as custom to download a image from a URL, others you can set to prebuilts e.g. Lightbulb
+    url: 'https://wxsd-sales.github.io/kiosk-demos/icons/webex-logo.png' // URL for the icon image
   },
-  prompt: {
+  prompt: { // Text input prompt config
     placeholder: 'Conference ID',
     title: 'Webex Call',
     text: 'Enter the Webex Conference ID',
