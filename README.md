@@ -21,8 +21,7 @@ const patterns = [
 
 ### Flow Diagram
 
-![image](https://user-images.githubusercontent.com/21026209/235206216-20d3dce8-c985-44df-a3bb-1a37db528f02.png)
-
+![image](https://user-images.githubusercontent.com/21026209/235311057-1dec9885-67b1-469e-a844-b963a8479c73.png)
 
 ## Setup
 
